@@ -47,10 +47,10 @@
 // console.log(allClass);
 
 // - поміняти колір тексту у всіх елементів fc_rules на червоний
-let allClass = document.getElementsByClassName('fc_rules');
-for (let i = 0; i < allClass.length; i++) {
-    allClass[i].style.color = 'red'
-
-}
+// let allClass = document.getElementsByClassName('fc_rules');
+// for (let i = 0; i < allClass.length; i++) {
+//     allClass[i].style.color = 'red'
+//
+// }
 
 
