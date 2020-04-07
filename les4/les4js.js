@@ -19,20 +19,29 @@
 // f(arrRand);
 
 // - створити функцію яка приймає три числа та виводить та повертає найменьше.
-// function f3() {
-//     let min = Math.min.apply(null,arguments);
+// function f3(a, b, c) {
+//    let min;
+//    if (a <= b && a <= c) min = a;
+//    if (b <= a && b <= c) min = b;
+//    if (c <= b && c <= a) min = c;
+//
 //     console.log(min);
-//     return min;
+//     return min
 // }
-// f3(11,32,23)
+// let minNum = f3(11,32,23);
+
 
 // - створити функцію яка приймає три числа та виводить та повертає найбільше.
-// function f4() {
-//     let max = Math.max.apply(null,arguments);
+// function f3(a, b, c) {
+//     let max;
+//     if (a >= b && a >= c) max = a;
+//     if (b >= a && b >= c) max = b;
+//     if (c >= b && c >= a) max = c;
+//
 //     console.log(max);
-//     return max;
+//     return max
 // }
-// f4(11,32,23)
+// let maxNum = f3(11,32,23);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше
 // function f5() {
@@ -42,6 +51,17 @@
 //     return min;
 // }
 // f5(11,32,23,4,65,46,57,8,9,10)
+
+function f3(a, b, c) {
+    let min;
+    if (a <= b && a <= c) min = a;
+    if (b <= a && b <= c) min = b;
+    if (c <= b && c <= a) min = c;
+
+    console.log(min);
+    return min
+}
+let min = f3(11,32,23);
 
 // - створити функцію яка виводить масив
 // const arra = [5, 6, 2, 3, 7];
