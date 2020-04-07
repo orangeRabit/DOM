@@ -246,24 +246,27 @@
 	// [1,0,6,0,3] => [1,6,3,0,0]
 	// [0,1,2,3,4] => [1,2,3,4,0]
 	// [0,0,1,0] => [1,0,0,0]
-function f14(arr) {
-    let arrZero = [];
-    let arrNum = [];
-    for (const arrElement of arr) {
-        if (arrElement === 0) {
-            arrZero.push(0);
-        }else {
-            arrNum.push(arrElement);
-        }
-    }
-    return arrNum.concat(arrZero);
-}
-let NumZero = f14([1,0,6,0,3]);
-console.log(NumZero);
-let NumZero1 = f14([0,1,2,3,4]);
-console.log(NumZero1);
-let NumZero2 = f14([0,0,1,0]);
-console.log(NumZero2);
+// function f14(arr) {
+//     let arrZero = [];
+//     let arrNum = [];
+//     for (const arrElement of arr) {
+//         if (arrElement === 0) {
+//             arrZero.push(0);
+//         }else {
+//             arrNum.push(arrElement);
+//         }
+//     }
+//     return arrNum.concat(arrZero);
+// }
+// let NumZero = f14([1,0,6,0,3]);
+// console.log(NumZero);
+// let NumZero1 = f14([0,1,2,3,4]);
+// console.log(NumZero1);
+// let NumZero2 = f14([0,0,1,0]);
+// console.log(NumZero2);
+
+
+
 // Створити функцію яка :
 	// - Додає в боді блок з текстом "Hello owu"
 	// - Додає в боді елемент з текстом . Тип елементу та текст отримати через аргументи
