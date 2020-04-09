@@ -38,27 +38,63 @@
     // ]
     //
     // }
-    function Tag(tagName, tagAction, atrName, atrAction, atrName1, atrAction1 ) {
-        this.tagName = tagName;
-        this.tagAction = tagAction;
-        this.atribut = [
-            {name: atrName,
-             action: atrAction,
-            },
-            {name: atrName1,
-             action: atrAction1,
-            }
-        ]
-    }
-
-    const tagA = new Tag('a', 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок.', 'accesskey', 'Активация ссылки с помощью комбинации клавиш.', 'oords', 'Устанавливает координаты активной области.' );
-    console.log(tagA);
-
-
-    // ==============================================
+    // function Tag(tagName, tagAction, atrName ) {
+    //     this.tagName = tagName;
+    //     this.tagAction = tagAction;
+    //     this.atribut = atrName;
     //
+    // }
     //
-    // ==============================================
+    // let tagName = 'a';
+    // let tagAction = 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок. ';
+    // let atribut = [
+    //     {nameAttr: 'accesskey', actAttr: 'Переход к области с помощью комбинации клавиш'},
+    //     {nameAttr: 'coords', actAttr: 'Устанавливает координаты активной области.'},
+    //     {nameAttr: 'download', actAttr: 'Предлагает скачать указанный по ссылке файл.'},
+    // ];
+    // let a = new Tag(tagName, tagAction, atribut)
+    // console.log(a);
+    //
+    // let divName = 'div';
+    // let divAction = 'Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого.';
+    // let divAtribut = [
+    //     {nameAttr: 'align', actAttr: 'Задает выравнивание содержимого тега <div>.'},
+    //     {nameAttr: 'title', actAttr: 'Добавляет всплывающую подсказку к содержимому.'},
+    // ];
+    // let div = new Tag(divName, divAction, divAtribut)
+    // console.log(div);
+    //
+    // let HName = 'h1';
+    // let HAction = 'Так, тег <h1> представляет собой наиболее важный заголовок первого уровня ';
+    // let HAtribut = [
+    //     {nameAttr: 'align', actAttr: 'Определяет выравнивание заголовка.'},
+    // ];
+    //
+    // let h = new Tag(tagName, tagAction, atribut)
+    // console.log(h);
+    //
+    // let tagSpan = 'span';
+    // let spanAction = 'Тег <span> предназначен для определения строчных элементов документа ';
+    // let spanAtribut = [
+    //     {nameAttr: 'accesskey', actAttr: 'Переход к области с помощью комбинации клавиш'},
+    //     {nameAttr: 'class', actAttr: 'Определяет имя класса, которое позволяет связать тег со стилевым оформлением.'},
+    //     {nameAttr: 'contenteditable', actAttr: 'Сообщает, что элемент доступен для редактирования пользователем.'},
+    // ];
+    //
+    // let span = new Tag(tagSpan, spanAction, spanAtribut)
+    // console.log(span);
+    //
+    // let tagInput = 'input';
+    // let inputAction = 'Тег <input> является одним из разносторонних элементов формы и позволяет создавать разные элементы интерфейса и обеспечить взаимодействие с пользователем ';
+    // let inputAtribut = [
+    //     {nameAttr: 'accesskey', actAttr: 'Переход к области с помощью комбинации клавиш'},
+    //     {nameAttr: 'accept', actAttr: 'Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов..'},
+    //     {nameAttr: 'align', actAttr: 'Определяет выравнивание изображения.'},
+    // ];
+    //
+    // let input = new Tag(tagInput, inputAction, inputAtribut)
+    // console.log(input);
+
     //     -  Створити класс  для об'єкту який описує теги
     // Властивості
     // -назва тегу
@@ -92,19 +128,116 @@
     // }
     // ==============================================
     //
+    // class Tag {
+    //     constructor(tagName, tagAction, atrName ) {
+    //         this.tagName = tagName;
+    //         this.tagAction = tagAction;
+    //         this.atribut = atrName;
+    //     }
+    // }
     //
+    // let tagName = 'a';
+    // let tagAction = 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок. ';
+    // let atribut = [
+    //     {nameAttr: 'accesskey', actAttr: 'Переход к области с помощью комбинации клавиш'},
+    //     {nameAttr: 'coords', actAttr: 'Устанавливает координаты активной области.'},
+    //     {nameAttr: 'download', actAttr: 'Предлагает скачать указанный по ссылке файл.'},
+    // ];
+    // let a = new Tag(tagName, tagAction, atribut)
+    // console.log(a);
     //
-    // ==============================================
+    // let divName = 'div';
+    // let divAction = 'Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого.';
+    // let divAtribut = [
+    //     {nameAttr: 'align', actAttr: 'Задает выравнивание содержимого тега <div>.'},
+    //     {nameAttr: 'title', actAttr: 'Добавляет всплывающую подсказку к содержимому.'},
+    // ];
+    // let div = new Tag(divName, divAction, divAtribut)
+    // console.log(div);
+    //
+    // let HName = 'h1';
+    // let HAction = 'Так, тег <h1> представляет собой наиболее важный заголовок первого уровня ';
+    // let HAtribut = [
+    //     {nameAttr: 'align', actAttr: 'Определяет выравнивание заголовка.'},
+    // ];
+    //
+    // let h = new Tag(tagName, tagAction, atribut)
+    // console.log(h);
+    //
+    // let tagSpan = 'span';
+    // let spanAction = 'Тег <span> предназначен для определения строчных элементов документа ';
+    // let spanAtribut = [
+    //     {nameAttr: 'accesskey', actAttr: 'Переход к области с помощью комбинации клавиш'},
+    //     {nameAttr: 'class', actAttr: 'Определяет имя класса, которое позволяет связать тег со стилевым оформлением.'},
+    //     {nameAttr: 'contenteditable', actAttr: 'Сообщает, что элемент доступен для редактирования пользователем.'},
+    // ];
+    //
+    // let span = new Tag(tagSpan, spanAction, spanAtribut)
+    // console.log(span);
+    //
+    // let tagInput = 'input';
+    // let inputAction = 'Тег <input> является одним из разносторонних элементов формы и позволяет создавать разные элементы интерфейса и обеспечить взаимодействие с пользователем ';
+    // let inputAtribut = [
+    //     {nameAttr: 'accesskey', actAttr: 'Переход к области с помощью комбинации клавиш'},
+    //     {nameAttr: 'accept', actAttr: 'Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов..'},
+    //     {nameAttr: 'align', actAttr: 'Определяет выравнивание изображения.'},
+    // ];
+    //
+    // let input = new Tag(tagInput, inputAction, inputAtribut)
+    // console.log(input);
+
     //     - Створити об'єкт car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
     // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
     // -- info () - яка виводить всю інформацію про автомобіль
     // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
     // -- changeYear (newValue) - змінює рік випуску на значення newValue
     // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
-    // ==============================================
-    //
-    //
-    // ==============================================
+// let car = {
+//     model: 'Golf2',
+//     manufactured: 'Volkswagen',
+//     year: 1986,
+//     maxSpeed: 200,
+//     engine: 1.6,
+//     drive: function () {
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+//     },
+//     info: function () {
+//         if (this.driver) {
+//             console.log(`
+//             model: ${this.model},
+//             manufactured:${this.manufactured},
+//             year: ${this.year},
+//             maxSpeed: ${this.maxSpeed},
+//             engine: ${this.engine}
+//             driver: ${this.driver.name} ${this.driver.age}`
+//             )
+//         }
+//         console.log(`
+//             model: ${this.model},
+//             manufactured:${this.manufactured},
+//             year: ${this.year},
+//             maxSpeed: ${this.maxSpeed},
+//             engine: ${this.engine}`
+//         )
+//     },
+//     increaseMaxSpeed: function (newSpeed) {
+//         this.maxSpeed += newSpeed;
+//     },
+//     changeYear: function (newValue) {
+//         this.year = newValue;
+//     },
+//     addDriver: function (driver) {
+//         this.driver = driver;
+//     }
+//     }
+//     let driver = {name: 'Andrii', age: 25}
+//     car.addDriver(driver)
+//     car.changeYear(1996)
+//     car.increaseMaxSpeed(10)
+//     car.info()
+//     car.drive()
+
+
     //     - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
     // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
     // -- info () - яка виводить всю інформацію про автомобіль
@@ -112,8 +245,52 @@
     // -- changeYear (newValue) - змінює рік випуску на значення newValue
     // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
     // ==============================================
-    //
-    // ==============================================
+    // function Car (model, manufactured, year, maxSpeed, engine)  {
+    //         this.model = model;
+    //         this.manufactured = manufactured;
+    //         this.year = year;
+    //         this.maxSpeed = maxSpeed;
+    //         this.engine = engine;
+    //         this.drive = function () {
+    //         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+    //     };
+    //     this.info = function () {
+    //         if (this.driver) {
+    //             console.log(`
+    //             model: ${this.model},
+    //             manufactured:${this.manufactured},
+    //             year: ${this.year},
+    //             maxSpeed: ${this.maxSpeed},
+    //             engine: ${this.engine}
+    //             driver: ${this.driver.name} ${this.driver.age}`
+    //             )
+    //         }else
+    //         console.log(`
+    //             model: ${this.model},
+    //             manufactured:${this.manufactured},
+    //             year: ${this.year},
+    //             maxSpeed: ${this.maxSpeed},
+    //             engine: ${this.engine}`
+    //         )
+    //     };
+    //     this.increaseMaxSpeed = function (newSpeed) {
+    //         this.maxSpeed += newSpeed;
+    //     };
+    //     this.changeYear = function (newValue) {
+    //         this.year = newValue;
+    //     };
+    //     this.addDriver = function (driver) {
+    //         this.driver = driver;
+    //     };
+    //     }
+    //     let golf = new Car('Golf3', 'Volkswagen', 1995, 220, 1.8)
+    //     let driver = {name: 'Andrii', age: 25}
+    //     golf.addDriver(driver);
+    //     golf.changeYear(1996);
+    //     golf.increaseMaxSpeed(10);
+    //     golf.info();
+    //     golf.drive();
+
     //     - Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
     // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
     // -- info () - яка виводить всю інформацію про автомобіль
@@ -121,23 +298,142 @@
     // -- changeYear (newValue) - змінює рік випуску на значення newValue
     // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
     // ==============================================
+    // class Car   {
+    //     constructor(model, manufactured, year, maxSpeed, engine) {
     //
+    //     this.model = model;
+    //     this.manufactured = manufactured;
+    //     this.year = year;
+    //     this.maxSpeed = maxSpeed;
+    //     this.engine = engine;
     //
+    //     }
+    //     drive () {
+    //         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+    //     };
+    //    info () {
+    //         if (this.driver) {
+    //             console.log(`
+    //             model: ${this.model},
+    //             manufactured:${this.manufactured},
+    //             year: ${this.year},
+    //             maxSpeed: ${this.maxSpeed},
+    //             engine: ${this.engine}
+    //             driver: ${this.driver.name} ${this.driver.age}`
+    //             )
+    //         }else
+    //         console.log(`
+    //             model: ${this.model},
+    //             manufactured:${this.manufactured},
+    //             year: ${this.year},
+    //             maxSpeed: ${this.maxSpeed},
+    //             engine: ${this.engine}`
+    //         )
+    //     };
+    //     increaseMaxSpeed (newSpeed) {
+    //         this.maxSpeed += newSpeed;
+    //     };
+    //     changeYear (newValue) {
+    //         this.year = newValue;
+    //     };
+    //     addDriver (driver) {
+    //         this.driver = driver;
+    //     };
+    // }
+    // let golf = new Car('Golf3', 'Volkswagen', 1995, 220, 1.8)
+    // let driver = {name: 'Andrii', age: 25}
+    // golf.addDriver(driver);
+    // golf.changeYear(1996);
+    // golf.increaseMaxSpeed(10);
+    // golf.info();
+    // golf.drive();
     // ==============================================
+
     //     -створити класс попелюшка з полями ім'я, вік, розмір ноги
     // --Створити 10 попелюшок , покласти їх в масив
     // --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
     // -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
     // ==============================================
+    // class Cinderella {
+    //     constructor(name, age, footSize) {
+    //         this.name = name;
+    //         this.age = age;
+    //         this.footSize = footSize;
+    //     }
+    // }
     //
+    // class Prince {
+    //     constructor(name, age, shoesSize) {
+    //         this.name = name;
+    //         this.age = age;
+    //         this.shoesSize = shoesSize;
+    //     }
     //
+    //     findCind (arr) {
+    //         for (const cind of arr) {
+    //             if (cind.footSize === this.shoesSize) {
+    //                 console.log(`Я знайшов свою принцесу, її і'мя ${cind.name}!!!!`);
+    //             }
+    //         }
+    //     }
+    // }
     //
-    // ==============================================
+    // const cinderella1 = new Cinderella('Ania',23,36);
+    // const cinderella2 = new Cinderella('Ira',24,36.5);
+    // const cinderella3 = new Cinderella('Nastia',23,38);
+    // const cinderella4 = new Cinderella('Olia',25,37.5);
+    // const cinderella5 = new Cinderella('Oksana',20,37);
+    // const cinderella6 = new Cinderella('Katia',21,40);
+    // const cinderella7 = new Cinderella('Olha',22,36.5);
+    // const cinderella8 = new Cinderella('Mira',26,39);
+    // const cinderella9 = new Cinderella('Karina',25,36);
+    // const cinderella10 = new Cinderella('Masha',23,39);
+    // let arr = [cinderella1,cinderella2,cinderella3,cinderella4,cinderella5,cinderella6,cinderella7,cinderella8,cinderella9,cinderella10];
+    //
+    // const prince = new Prince('Artur', 25, 38);
+    // prince.findCind(arr)
+    //
+
     //     -створити функцію конструктор попелюшка з полями ім'я, вік, розмір ноги
     // --Створити 10 попелюшок , покласти їх в масив
     // --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
     // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
     // ==============================================
+    // function Cinderella (name, age, footSize) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.footSize = footSize;
+    //
+    // }
+    // function Prince (name, age, shoesSize) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.shoesSize = shoesSize;
+    //
+    //
+    //     this.findCind = function(arr) {
+    //         for (const cind of arr) {
+    //             if (cind.footSize === this.shoesSize) {
+    //                 console.log(`Я знайшов свою принцесу, її і'мя ${cind.name}!!!!`);
+    //             }
+    //         }
+    //     }
+    // }
+    //
+    // const cinderella1 = new Cinderella('Ania',23,36);
+    // const cinderella2 = new Cinderella('Ira',24,36.5);
+    // const cinderella3 = new Cinderella('Nastia',23,38);
+    // const cinderella4 = new Cinderella('Olia',25,37.5);
+    // const cinderella5 = new Cinderella('Oksana',20,37);
+    // const cinderella6 = new Cinderella('Katia',21,40);
+    // const cinderella7 = new Cinderella('Olha',22,36.5);
+    // const cinderella8 = new Cinderella('Mira',26,39);
+    // const cinderella9 = new Cinderella('Karina',25,36);
+    // const cinderella10 = new Cinderella('Masha',23,39);
+    // let arr = [cinderella1,cinderella2,cinderella3,cinderella4,cinderella5,cinderella6,cinderella7,cinderella8,cinderella9,cinderella10];
+    //
+    // const prince = new Prince('Artur', 25, 38);
+    // prince.findCind(arr)
 </script>
 </body>
 </html>
