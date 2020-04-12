@@ -6,6 +6,8 @@
 </head>
 <body>
 
+</body>
+</html>
 <script>
     // // - создать массив с 20 числами.
     // let array = [21,13,25,49,56,2,3,5,65,7,66,42,31,8,10,90,9,41,14,69];
@@ -67,10 +69,11 @@
     // const exclamationMark = strings.map(value => value + '!');
     // console.log(exclamationMark);
     //
+
     // Все робити через функції масивів (foreach, map ...тд)
     // Дан масив :
-        let users = [ {name: 'vasya', age: 31, status: false}, {name: 'petya', age: 30, status: true}, {name: 'kolya', age: 29, status: true}, {name: 'olya', age: 28, status: false}, {name: 'max', age: 30, status: true}, {name: 'anya', age: 31, status: false}, {name: 'oleg', age: 28, status: false}, {name: 'andrey', age: 29, status: true}, {name: 'masha', age: 30, status: true}, {name: 'olya', age: 31, status: false}, {name: 'max', age: 31, status: true} ];
-    console.log(users);
+    //     let users = [ {name: 'vasya', age: 31, status: false}, {name: 'petya', age: 30, status: true}, {name: 'kolya', age: 29, status: true}, {name: 'olya', age: 28, status: false}, {name: 'max', age: 30, status: true}, {name: 'anya', age: 31, status: false}, {name: 'oleg', age: 28, status: false}, {name: 'andrey', age: 29, status: true}, {name: 'masha', age: 30, status: true}, {name: 'olya', age: 31, status: false}, {name: 'max', age: 31, status: true} ];
+    // console.log(users);
     // // - відсортувати його за  віком (зростання , а потім окремо спадання)
     // const userUp = users.sort((a, b) => {
     //     if (a.age > b.age) {
@@ -109,23 +112,265 @@
     // });
     // console.log(nameLenght);
 
-    // - пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор
-    // (По якому принципу його створювати - ваше рішення), та зберегти це в новий масив (первинний масив залишиться без змін)
-
-        let user = users.map(value => value);
-        let id = user.forEach((value, index) => {
-            value.id = `${index}`
-
-        })
-    console.log(id);
-
-
-    // - відсортувати його за індентифікатором
+    // // - пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор
+    // // (По якому принципу його створювати - ваше рішення), та зберегти це в новий масив (первинний масив залишиться без змін)
     //
     //
-    // -- наисать функцию калькулятора с 2мя числами и колбеком
+    //
+    //     let user = users.slice(0)
+    //     console.log(user);
+    //     let idUser = user.map((value, index) => {
+    //         value.id = index+1;
+    //     })
+    //
+    //
+    //
 
-    // -- наисать функцию калькулятора с 3мя числами и колбеком
+    // // - відсортувати його за індентифікатором
+    // let idSort = user.sort((user1, user2) => user2.id - user1.id )
+    // console.log(idSort);
+
+    // // -- наисать функцию калькулятора с 2мя числами и колбеком
+    //
+    // function calculator(a, b, cb) {
+    //     console.log(cb(a, b));
+    //
+    // }
+    //     calculator(10,15,function (a, b) {
+    //     return b - a;
+    //
+    // });
+
+    // // -- наисать функцию калькулятора с 3мя числами и колбеком
+    // function calculator(a, b, c, cb) {
+    //     console.log(cb(a, b, c));
+    //
+    // }
+    // calculator(10,15,10, function (a, b, c) {
+    //     return (b - a)*c;
+    //
+    // });
+
+    // =============================================
+    // =============================================
+    // =============КЛАССНАЯ РАБОТА=================
+    // =============================================
+    // =============================================
+    //
+    //
+
+    //
+    //
+    // let cars = [
+    //     {producer:"subaru",model: "wrx",year: 2010, color:"blue",type: "sedan",engine: "ej204x",volume: 2,power: 400},
+    //     {producer:"subaru",model: "legacy",year: 2007, color:"silver",type: "sedan",engine: "ez30",volume: 3,power: 250},
+    //     {producer:"subaru",model: "tribeca",year: 2011, color:"white",type: "jeep",engine: "ej20",volume: 2,power: 300},
+    //     {producer:"subaru",model: "leone",year: 1998, color:"yellow",type: "sedan",engine: "ez20x",volume: 2,power: 140},
+    //     {producer:"subaru",model: "impreza",year: 2014, color:"red",type: "sedan",engine: "ej204x",volume: 2,power: 200},
+    //     {producer:"subaru",model: "outback",year: 2014, color:"red",type: "hachback",engine: "ej204",volume: 2,power: 165},
+    //     {producer:"bmw",model: "115",year: 2013, color:"red",type: "hachback",engine: "f15",volume: 1.5,power: 120},
+    //     {producer:"bmw",model: "315",year: 2010, color:"white",type: "sedan",engine: "f15",volume: 1.5, power: 120},
+    //     {producer:"bmw",model: "650",year: 2009, color:"black",type: "coupe",engine: "f60",volume: 6,power: 350},
+    //     {producer:"bmw",model: "320",year: 2012, color:"red",type: "sedan",engine: "f20",volume: 2,power: 180},
+    //     {producer:"mercedes",model: "e200",year: 1990, color:"silver",type: "sedan",engine: "eng200",volume: 2,power: 180},
+    //     {producer:"mercedes",model: "e63",year: 2017, color:"yellow",type: "sedan",engine: "amg63",volume: 3,power: 400},
+    //     {producer:"mercedes",model: "c250",year: 2017, color:"red",type: "sedan",engine: "eng25",volume: 2.5,power: 230}
+    // ];
+    // // Відфільтрувати масив за наступними крітеріями :
+    // //     - двигун більше 3х літрів
+    // cars.filter(value => {
+    //     if (value.volume > 3) {
+    //         console.log(`${value.producer} ${value.model}`);
+    //
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - двигун = 2л
+    // cars.filter(value => {
+    //     if (value.volume === 2) {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - виробник мерс
+    // cars.filter(value => {
+    //     if (value.producer === 'mercedes') {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - двигун більше 3х літрів + виробник мерседес
+    // cars.filter(value => {
+    //     if (value.volume >= 3 && value.producer === 'mercedes') {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - двигун більше 3х літрів + виробник субару
+    // cars.filter(value => {
+    //     if (value.volume >= 3 && value.producer === 'subaru') {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - сили більше ніж 300
+    // cars.filter(value => {
+    //     if (value.power > 300) {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - сили більше ніж 300 + виробник субару
+    // cars.filter(value => {
+    //     if (value.power > 300 && value.producer === 'subaru') {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - мотор серіі ej
+    // cars.filter(value => {
+    //     if (value.engine.includes('ej') ) {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - сили більше ніж 300 + виробник субару + мотор серіі ej
+    // cars.filter(value => {
+    //     if (value.power > 300 && value.producer === 'subaru' && value.engine.includes('ej') ) {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - двигун меньше 3х літрів + виробник мерседес
+    // cars.filter(value => {
+    //     if (value.volume < 3 && value.producer === 'mercedes') {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - двигун більше 2л + сили більше 250
+    // cars.filter(value => {
+    //     if (value.volume > 2 && value.power > 250) {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    // // - сили більше 250  + виробник бмв
+    // cars.filter(value => {
+    //     if (value.power > 250 && value.producer === 'bmw') {
+    //         console.log(`${value.producer} ${value.model}`);
+    //     }
+    // })
+    // console.log('_____________________')
+    //
+    //
+
+    //
+    // - взять слдующий массив
+    let usersWithAddress = [
+        {id: 1, name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+        {id: 2, name: 'petya', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 1}},
+        {id: 3, name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
+        {id: 4, name: 'olya', age: 28, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 90}},
+        {id: 5, name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
+        {id: 6, name: 'anya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
+        {id: 7, name: 'oleg', age: 28, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 22}},
+        {id: 8, name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
+        {id: 9, name: 'masha', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 12}},
+        {id: 10, name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+        {id: 11, name: 'max', age: 31, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}}
+    ];
+    // -- отсортировать его по id пользователей
+    // let sortIduser = usersWithAddress.sort((user1, user2) => user1.id - user2.id )
+    // console.log(sortIduser);
+
+    // -- отсортировать его по id пользователей в обратном опрядке
+    // let sortIduserRevers = usersWithAddress.sort((user1, user2) => user2.id - user1.id )
+    // console.log(sortIduserRevers);
+
+    // -- отсортировать его по возрасту пользователей
+    // let sortAgeUser = usersWithAddress.sort((user1, user2) => user1.age - user2.age )
+    // console.log(sortAgeUser);
+
+    // -- отсортировать его по возрасту пользователей в обратном порядке
+    // let sortAgeUserRevers = usersWithAddress.sort((user1, user2) => user2.age - user1.age )
+    // console.log(sortAgeUserRevers);
+
+    // -- отсортировать его по имени пользователей
+    // let sortNameUser = usersWithAddress.sort((user1, user2) => {
+    //     if (user1.name < user2.name) {
+    //         return -1
+    //     } else {
+    //         return 1
+    //     }
+    // } )
+    // console.log(sortNameUser);
+
+    // -- отсортировать его по имени пользователей в обратном порядке
+    // let sortNameUserRevers = usersWithAddress.sort((user1, user2) => {
+    //     if (user1.name < user2.name) {
+    //         return 1
+    //     } else {
+    //         return -1
+    //     }
+    // } )
+    // console.log(sortNameUserRevers);
+
+    // -- отсортировать его по названию улицы  в алфавитном порядке
+    // let sortAdresUser = usersWithAddress.sort((user1, user2) => {
+    //     if (user1.address.street < user2.address.street) {
+    //         return -1
+    //     } else {
+    //         return 1
+    //     }
+    // } )
+    // console.log(sortAdresUser);
+
+    // -- отсортировать его по имени пользователей
+    // let sortNameUser = usersWithAddress.sort((user1, user2) => {
+    //     if (user1.name < user2.name) {
+    //         return -1
+    //     } else {
+    //         return 1
+    //     }
+    // } )
+    // console.log(sortNameUser);
+
+    // -- отсортировать его по номеру дома по возрастанию
+    // let sortHomeNumberUser = usersWithAddress.sort((user1, user2) => user1.address.number - user2.address.number)
+    // console.log(sortHomeNumberUser);
+
+    // -- отфильтровать (оставить) тех кто младше 30
+    let less30 = usersWithAddress.filter(value => {
+        if (value.age < 30) {
+            console.log(`${value.name} ${value.age}`)
+
+        }
+    })
+    console.log('_________');
+    // -- отфильтровать (оставить) тех у кого отрицательный статус
+    let userstatus = usersWithAddress.filter(value => {
+        if (value.status === false) {
+            console.log(`${value.name} ${value.age} ${value.status}`)
+
+        }
+    })
+    console.log('_________');
+    // -- отфильтровать (оставить) тех у кого отрицательный статус и младше 30 лет
+    let userstatusAge = usersWithAddress.filter(value => {
+        if (value.status === false && value.age < 30) {
+            console.log(`${value.name} ${value.age} ${value.status}`)
+
+        }
+    })
+    console.log('_________');
+    // -- отфильтровать (оставить) тех у кого номер дома четный
+    let num = usersWithAddress.filter(value => {
+        if (value.address.number%2 === 0) {
+            console.log(`${value.name} ${value.age} ${value.address.number}`)
+
+        }
+    })
+    console.log('_________');
+
 </script>
-</body>
-</html>
