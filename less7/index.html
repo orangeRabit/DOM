@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <div id="text">-->
+<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, natus quam? Blanditiis et illo iste officia omnis perspiciatis quia suscipit vel! Blanditiis ducimus, excepturi minima molestias praesentium quam saepe veritatis.-->
+<!--    </div>-->
+<!--    <button id="btn">Сховати текст</button>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <input id="inpt" type="number" placeholder="Введіть ваш вік">-->
+
+<!--    <button id="conf">Confirm</button>-->
+<!--    <br>-->
+<!--    <div id="age"></div>-->
+
+<!--    <ul>-->
+<!--        <li id="menu">-->
+<!--            <a href="#">Menu</a>-->
+<!--            <ul id="subMenu">-->
+<!--                <li><a href="#">punct 1</a></li>-->
+<!--                <li><a href="#">punct 2</a></li>-->
+<!--                <li><a href="#">punct 3</a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--    </ul>-->
+
+<div id="comentaries"></div>
+
+<form action="" id="form1">
+    <input type="text" name="Name" placeholder="Name">
+    <input type="number" name="Age" placeholder="Age">
+</form>
+<form action="" id="form2">
+    <input type="text" name="Name2" placeholder="Name">
+    <input type="number" name="Age2" placeholder="Age">
+</form>
+<br>
+<br>
+<button id="buton">go</button>
+
+<div id="content"></div>
+<h1>Правила бойцовского клуба</h1>
+<div id="wrap">
+    <div class="rules rule1">
+        <h2>Первое правило Бойцовского клуба.</h2>
+        <p>Никому не рассказывать о Бойцовском клубе.</p>
+    </div>
+    <div class="rules rule2">
+        <h2>Второе правило Бойцовского клуба.</h2>
+        <p>Никогда никому не рассказывать о Бойцовском клубе.</p>
+    </div>
+    <div class="rules rule3">
+        <h2>Третье правило Бойцовского клуба.</h2>
+        <p>В схватке участвуют только двое.</p>
+    </div>
+    <div class="rules rule4">
+        <h2>Четвертое правило Бойцовского клуба.</h2>
+        <p>Не более одного поединка за один раз.</p>
+    </div>
+
+    <div class="rules rule5">
+        <h2>Пятое правило Бойцовского клуба.</h2>
+        <p>Бойцы сражаются без обуви и голые по пояс.</p>
+    </div>
+    <div class="rules rule6">
+        <h2>Шестое правило Бойцовского клуба.</h2>
+        <p>Поединок продолжается столько, сколько потребуется.</p>
+    </div>
+    <div class="rules rule7">
+        <h2>Седьмое правило Бойцовского клуба.</h2>
+        <p>Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок
+            окончен.</p>
+    </div>
+    <div class="rules rule8">
+        <h2>Восьмое и последнее правило Бойцовского клуба.</h2>
+        <p>Новичок обязан принять бой.</p>
+    </div>
+</div>
+
+<script>
+    // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
+    //
+    // const text = document.getElementById('text');
+    // const btn = document.getElementById('btn');
+    //
+    // btn.onclick = (ev) => {
+    //     text.style.display = 'none'
+    // }
+
+    //     - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
+    //
+    // const btn = document.getElementById('btn');
+    // btn.onclick = ev => {
+    //     btn.hidden = true
+    // }
+
+    // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+    //
+    // const button = document.getElementById('conf');
+    // const age = document.getElementById('age');
+    // button.onclick = ev => {
+    //     const input = document.getElementById('inpt');
+    //     const value = input.value;
+    //     if (value >= 18) {
+    //         age.innerText = 'You are welcome'
+    //     } else {
+    //         age.innerText = 'Go Home!!'
+    //     }
+    //
+    // }
+
+    // - Создайте меню, которое раскрывается/сворачивается при клике
+    //
+    //     const menu = document.getElementById('menu');
+    //     const subMenu = document.getElementById('subMenu');
+    //     subMenu.hidden = true
+    //
+    //     menu.onclick = ev => {
+    //         subMenu.hidden
+    //         ?subMenu.hidden = false
+    //         :subMenu.hidden = true
+    //     }
+
+    // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
+    //     Вывести список комментариев в документ, каждый в своем блоке.
+    //     Добавьте каждому комментарию по кнопке для сворачивания его body.
+    //
+    // let comentArr = [
+    //     {title: 'lorem', body:'lorem ipsum dolo sit ameti'},
+    //     {title: 'lorem', body:'lorem ipsum dolo sit ameti'},
+    //     {title: 'lorem', body:'lorem ipsum dolo sit ameti'},
+    //     {title: 'lorem', body:'lorem ipsum dolo sit ameti'},
+    //     {title: 'lorem', body:`lorem ipsum dolo sit ameti`}
+    // ]
+    //
+    // const comentaries = document.getElementById('comentaries');
+    // comentArr.forEach(coment => {
+    //     const div = document.createElement('div');
+    //     const h2 = document.createElement('h2');
+    //     const p = document.createElement('p');
+    //     const btn = document.createElement('button');
+    //     h2.textContent = coment.title;
+    //     p.textContent = coment.body;
+    //     p.hidden = true
+    //     btn.innerText = 'open coment';
+    //     btn.onclick = (ev) => {
+    //         p.hidden
+    //         ?p.hidden = false
+    //         :p.hidden = true
+    //     }
+    //
+    //     div.appendChild(h2);
+    //     div.appendChild(p);
+    //     div.appendChild(btn);
+    //     comentaries.appendChild(div);
+    //
+    // })
+
+    // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
+    //     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
+    // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
+    //
+    // const button = document.getElementById('buton');
+    // button.onclick = ev => {
+    //     const form1 = document.forms.form1;
+    //     const nameForm1 = form1.Name;
+    //     const ageForm1 = form1.Age;
+    //     const form2 = document.forms.form2;
+    //     const nameForm2 = form2.Name2;
+    //     const ageForm2 = form2.Age2;
+    //     console.log('Форма 1')
+    //     console.log(`Імя ${nameForm1.value}`);
+    //     console.log(`Вік ${ageForm1.value}`);
+    //     console.log('Форма 2')
+    //     console.log(`Імя ${nameForm2.value}`);
+    //     console.log(`Вік ${ageForm2.value}`);
+    // }
+
+    // - Створити функцію, яка генерує таблицю.
+    //     Перший аргумент визначає кількість строк.
+    //     Другий параметр визначає кліькіть ячеєк в кожній строці.
+    //     Третій параметр визначає елемент в який потрібно таблицю додати.
+    //
+    //
+
+    // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+    //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+    // (Додатковачастина для завдання)
+    //
+
+    // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
+    //
+    //
+
+    // - Сворити масив не цензцрних слів.
+    //     Сворити інпут текстового типу.
+    //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
+    // кинути алерт з попередженням.
+    //     Перевірку робити при натисканні на кнопку
+    //
+    //
+
+    // - Сворити масив не цензцрних слів.
+    //     Сворити інпут текстового типу.
+    //     Потрібно перевіряти чи не містить ціле речення в собі погані слова.
+    //     Кинути алерт з попередженням у випадку якщо містить.
+    //     Перевірку робити при натисканні на кнопку
+    //
+    //
+    //
+
+    // -- создать скрипт, который берет считывает на странице (rules.html) текст и делает сбоку меню-оглавление по всем заголовкам которые есть в тексте.
+    //     При клике на пункт оглавления вы должны отправляться к этому пункту в тексте
+    //
+
+    // -- взять массив пользователей
+    // let usersWithAddress = [
+    //     {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+    //     {id:2,name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
+    //     {id:3,name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
+    //     {id:4,name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
+    //     {id:5,name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
+    //     {id:6,name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
+    //     {id:7,name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
+    //     {id:8,name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
+    //     {id:9,name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
+    //     {id:10,name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+    //     {id:11,name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
+    // ];
+    // Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива. Фильтры могут работать как вместе так и по отдельности.
+    // 1й - отфильтровывает пользователей со статусом false (осталяет со статусом false)
+    // 2й - оставляет старше 29 лет включительно
+    // 3й - оставляет тех у кого город киев
+    // Данные выводить в документ
+    //
+    //
+    //
+
+    // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
+    // при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
+    // НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
+    //     Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
+    //
+    //
+
+    // *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+</script>
+</body>
+</html>
