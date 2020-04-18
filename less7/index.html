@@ -28,58 +28,77 @@
 <!--        </li>-->
 <!--    </ul>-->
 
-<div id="comentaries"></div>
+<!--<div id="comentaries"></div>-->
 
-<form action="" id="form1">
-    <input type="text" name="Name" placeholder="Name">
-    <input type="number" name="Age" placeholder="Age">
-</form>
-<form action="" id="form2">
-    <input type="text" name="Name2" placeholder="Name">
-    <input type="number" name="Age2" placeholder="Age">
-</form>
+<!--<form action="" id="form1">-->
+<!--    <input type="text" name="Name" placeholder="Name">-->
+<!--    <input type="number" name="Age" placeholder="Age">-->
+<!--</form>-->
+<!--<form action="" id="form2">-->
+<!--    <input type="text" name="Name2" placeholder="Name">-->
+<!--    <input type="number" name="Age2" placeholder="Age">-->
+<!--</form>-->
+<!--<br>-->
+<!--<br>-->
+<!--<button id="buton">Отримати</button>-->
+
+
+<!--<input type="number" placeholder="Строки" id = 'row' >-->
+<!--<input type="number" placeholder="Колонки" id = 'col'>-->
+<!--<input type="text" placeholder="Тег" id = 'tag'>-->
+<!--<button id="tabBtn">generate</button>-->
+
+<!--<input type="text" id="word">-->
+<!--<button id="wordBtn">Відправити</button>-->
+
+<!--<div id="content"></div>-->
+<!--<h1>Правила бойцовского клуба</h1>-->
+<!--<div id="wrap">-->
+<!--    <div class="rules rule1">-->
+<!--        <h2>Первое правило Бойцовского клуба.</h2>-->
+<!--        <p>Никому не рассказывать о Бойцовском клубе.</p>-->
+<!--    </div>-->
+<!--    <div class="rules rule2">-->
+<!--        <h2>Второе правило Бойцовского клуба.</h2>-->
+<!--        <p>Никогда никому не рассказывать о Бойцовском клубе.</p>-->
+<!--    </div>-->
+<!--    <div class="rules rule3">-->
+<!--        <h2>Третье правило Бойцовского клуба.</h2>-->
+<!--        <p>В схватке участвуют только двое.</p>-->
+<!--    </div>-->
+<!--    <div class="rules rule4">-->
+<!--        <h2>Четвертое правило Бойцовского клуба.</h2>-->
+<!--        <p>Не более одного поединка за один раз.</p>-->
+<!--    </div>-->
+
+<!--    <div class="rules rule5">-->
+<!--        <h2>Пятое правило Бойцовского клуба.</h2>-->
+<!--        <p>Бойцы сражаются без обуви и голые по пояс.</p>-->
+<!--    </div>-->
+<!--    <div class="rules rule6">-->
+<!--        <h2>Шестое правило Бойцовского клуба.</h2>-->
+<!--        <p>Поединок продолжается столько, сколько потребуется.</p>-->
+<!--    </div>-->
+<!--    <div class="rules rule7">-->
+<!--        <h2>Седьмое правило Бойцовского клуба.</h2>-->
+<!--        <p>Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок-->
+<!--            окончен.</p>-->
+<!--    </div>-->
+<!--    <div class="rules rule8">-->
+<!--        <h2>Восьмое и последнее правило Бойцовского клуба.</h2>-->
+<!--        <p>Новичок обязан принять бой.</p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div id="users"></div>
+<p>отфильтровывает пользователей со статусом false</p>
+<input type="checkbox" name="status" id="stat">
+<p>оставляет старше 29 лет включительно</p>
+<input type="checkbox" name="age" id="age">
+<p>оставляет тех у кого город киев</p>
+<input type="checkbox" name="city" id="city">
 <br>
-<br>
-<button id="buton">go</button>
-
-<div id="content"></div>
-<h1>Правила бойцовского клуба</h1>
-<div id="wrap">
-    <div class="rules rule1">
-        <h2>Первое правило Бойцовского клуба.</h2>
-        <p>Никому не рассказывать о Бойцовском клубе.</p>
-    </div>
-    <div class="rules rule2">
-        <h2>Второе правило Бойцовского клуба.</h2>
-        <p>Никогда никому не рассказывать о Бойцовском клубе.</p>
-    </div>
-    <div class="rules rule3">
-        <h2>Третье правило Бойцовского клуба.</h2>
-        <p>В схватке участвуют только двое.</p>
-    </div>
-    <div class="rules rule4">
-        <h2>Четвертое правило Бойцовского клуба.</h2>
-        <p>Не более одного поединка за один раз.</p>
-    </div>
-
-    <div class="rules rule5">
-        <h2>Пятое правило Бойцовского клуба.</h2>
-        <p>Бойцы сражаются без обуви и голые по пояс.</p>
-    </div>
-    <div class="rules rule6">
-        <h2>Шестое правило Бойцовского клуба.</h2>
-        <p>Поединок продолжается столько, сколько потребуется.</p>
-    </div>
-    <div class="rules rule7">
-        <h2>Седьмое правило Бойцовского клуба.</h2>
-        <p>Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок
-            окончен.</p>
-    </div>
-    <div class="rules rule8">
-        <h2>Восьмое и последнее правило Бойцовского клуба.</h2>
-        <p>Новичок обязан принять бой.</p>
-    </div>
-</div>
+<button id="filtr">Відфільтрувати</button>
 
 <script>
     // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
@@ -186,11 +205,34 @@
     //     Третій параметр визначає елемент в який потрібно таблицю додати.
     //
     //
+    // const content = document.getElementById('content');
+    // function  createTable(rows, cols,tag) {
+    //     const table = document.createElement('table');
+    //     for (let i = 0; i < rows; i++) {
+    //         const tr = document.createElement('tr');
+    //         for (let j = 0; j < cols; j++) {
+    //             const td = document.createElement('td');
+    //             td.innerHTML = i.toString() + j.toString();
+    //             tr.appendChild(td);
+    //
+    //         }
+    //         table.appendChild(tr);
+    //     }
+    //     tag.appendChild(table);
+    // }
+    // createTable(5,5,content);
 
     // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
     //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
     // (Додатковачастина для завдання)
     //
+    // const tabBtn = document.getElementById('tabBtn');
+    // tabBtn.onclick = ev => {
+    //     const inputRow = document.getElementById('row').value;
+    //     const inputCol = document.getElementById('col').value;
+    //     const inputTag = document.getElementById('tag').value;
+    //     createTable(inputRow,inputCol,inputTag);
+    // }
 
     // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
     //
@@ -203,42 +245,131 @@
     //     Перевірку робити при натисканні на кнопку
     //
     //
+    // let arr = ['fuck', 'dick'];
+    // const input = document.getElementById('word');
+    // const button = document.getElementById('wordBtn');
+    // button.onclick = ev => {
+    //     const value = input.value;
+    //     for (const arrElement of arr) {
+    //         if (value === arrElement) {
+    //             console.log('NONONO')
+    //         } else {
+    //             console.log('good boy');
+    //         }
+    //     }
+    //
+    //
+    // }
 
     // - Сворити масив не цензцрних слів.
     //     Сворити інпут текстового типу.
     //     Потрібно перевіряти чи не містить ціле речення в собі погані слова.
     //     Кинути алерт з попередженням у випадку якщо містить.
     //     Перевірку робити при натисканні на кнопку
+    // let arr = ['fuck', 'dick'];
+    // const input = document.getElementById('word');
+    // const button = document.getElementById('wordBtn');
+    // button.onclick = ev => {
+    //     const value = input.value;
+    //     for (const arrElement of arr) {
+    //         if (value.includes(arrElement)) {
+    //             console.log('NONONO')
+    //         } else {
+    //             console.log('good boy');
+    //         }
+    //     }
     //
+    //
+    // }
     //
     //
 
     // -- создать скрипт, который берет считывает на странице (rules.html) текст и делает сбоку меню-оглавление по всем заголовкам которые есть в тексте.
     //     При клике на пункт оглавления вы должны отправляться к этому пункту в тексте
     //
+    // const arrayH2 = document.getElementsByTagName('h2');
+    // const content = document.getElementById('content');
+    // const wrap = document.getElementById('wrap');
+    // const ul = document.createElement('ul');
+    // for (let i = 0; i < arrayH2.length; i++) {
+    //     const li = document.createElement('li');
+    //     const a = document.createElement('a');
+    //     let yakir = 'yakir'+i;
+    //     a.href = '#'+yakir;
+    //     arrayH2[i].setAttribute('id', yakir);
+    //     a.innerHTML = arrayH2[i].innerText;
+    //     li.appendChild(a);
+    //     ul.appendChild(li);
+    // }
+    // content.appendChild(ul);
+    // content.style.width = '30%'
+    // wrap.style.width = '70%'
+    // content.style.float = 'left'
+    // wrap.style.float = 'left'
 
     // -- взять массив пользователей
-    // let usersWithAddress = [
-    //     {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
-    //     {id:2,name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
-    //     {id:3,name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
-    //     {id:4,name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
-    //     {id:5,name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
-    //     {id:6,name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
-    //     {id:7,name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
-    //     {id:8,name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
-    //     {id:9,name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
-    //     {id:10,name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
-    //     {id:11,name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
-    // ];
+    let usersWithAddress = [
+        {id: 1, name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+        {id: 2, name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
+        {id: 3, name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
+        {id: 4, name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
+        {id: 5, name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
+        {id: 6, name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
+        {id: 7, name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
+        {id: 8, name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
+        {id: 9, name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
+        {id: 10, name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+        {id: 11, name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
+    ];
     // Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива. Фильтры могут работать как вместе так и по отдельности.
     // 1й - отфильтровывает пользователей со статусом false (осталяет со статусом false)
     // 2й - оставляет старше 29 лет включительно
     // 3й - оставляет тех у кого город киев
     // Данные выводить в документ
-    //
-    //
-    //
+    const users = document.getElementById('users');
+    const input1 = document.getElementById('stat');
+    const value = input1.value;
+    const input2 = document.getElementById('age');
+    const input3 = document.getElementById('city');
+    const btn = document.getElementById('filtr');
+
+    btn.onclick = ev => {
+        // usersWithAddress.forEach(user => {
+        //     allUsers(user);
+        // })
+        if (value.checked) {
+            usersWithAddress.forEach(user => {
+                allUsers(user);
+            })
+        }
+
+    };
+
+    function allUsers(user) {
+        const div = document.createElement('div');
+        const name = document.createElement('h2');
+        const age = document.createElement('p');
+        const status = document.createElement('p');
+        const adres = document.createElement('p');
+        name.innerText = `Ім'я: ${user.name}`;
+        age.innerText = `Вік: ${user.age}`;
+        status.innerText = `Статус: ${user.status}`;
+        adres.innerText = `Адреса: ${user.address.city}`
+        div.appendChild(name)
+        div.appendChild(age)
+        div.appendChild(status)
+        div.appendChild(adres)
+
+        div.style.border = 'solid', '1px', 'black';
+        div.style.margin = '5px';
+        div.style.padding = '5px';
+
+        users.appendChild(div)
+        users.style.display = 'flex'
+    }
+
+
+
 
     // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
     // при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
